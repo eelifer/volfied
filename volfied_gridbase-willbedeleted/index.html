@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volfied Grid-Based Area Capture</title>
+
+    <!-- CSS Modülleri -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/ui.css">
+    <link rel="stylesheet" href="src/css/canvas.css">
+</head>
+
+<body>
+
+    <h1 class="game-title">Grid-Based Area Capture (300x200)</h1>
+
+    <!-- Ana Konteyner: Sol Panel ve Sağ Canvas'ı Yan Yana Tutar -->
+    <div id="game-container">
+
+        <!-- Sol Taraf: Timer, Lives, Score Paneli (Dikey Sütun) -->
+        <div id="sidebar-ui">
+            <div class="ui-card">
+                <span class="ui-label">TIME</span>
+                <span id="timerVal" class="ui-value">180</span>
+            </div>
+
+            <div class="ui-card">
+                <span class="ui-label">LIVES</span>
+                <span id="livesVal" class="ui-value">❤️ ❤️ ❤️</span>
+            </div>
+
+            <div class="ui-card">
+                <span class="ui-label">SCORE</span>
+                <span id="scoreVal" class="ui-value">%0.0</span>
+            </div>
+        </div>
+
+        <!-- Sağ Taraf: Oyun Ekrani (Canvas) -->
+        <div id="canvas-container">
+            <canvas id="gameCanvas" width="1240" height="840"></canvas>
+        </div>
+
+    </div>
+
+    <script type="module" src="src/js/game.js"></script>
+</body>
+
+</html>
